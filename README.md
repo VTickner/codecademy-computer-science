@@ -11,6 +11,7 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
 - Algorithms
 - Intro To DataStructures
 - [Intro To Programming](#intro-to-programming)
+  - [Len's Slice](#lens-slice)
   - [Gradebook](#gradebook)
   - [Sal's Shipping](#sals-shipping)
   - [Magic 8-Ball](#magic-8-ball)
@@ -18,6 +19,22 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
   - [Author](#author)
 
 # Intro To Programming
+
+## Len's Slice
+
+The aim of this project was to create a Python program that takes pizzas and their prices using lists and alters the lists to organise the data.
+
+- 2D lists of pizzas and prices are hardcoded into the program.
+- `list.count(item)` used to count how many pizzas are $2.
+- `len(list)` used to count the number of different kinds of pizzas.
+- `list.sort()` to sort the list in ascending order of price.
+- `list.pop()` to remove the most expensive pizza.
+- `list.insert(index, item)` to add a new pizza in appropriate position to keep price sorted in list.
+- `list[:3]` to find the cheapest three pizzas.
+
+### Code & Potential Improvements
+
+- Solution URL: [Len's Slice](./lens_slice.py)
 
 ## Gradebook
 
