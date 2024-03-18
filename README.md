@@ -34,7 +34,7 @@ The aim of this project was to create a Python program that takes pizzas and the
 
 ### Code & Potential Improvements
 
-- Solution URL: [Len's Slice](./lens_slice.py)
+- Solution URL: [Len's Slice](./intro_to_programming/lens_slice.py)
 
 ## Gradebook
 
@@ -45,7 +45,7 @@ The aim of this project was to create a Python program that takes student data a
 
 ### Code & Potential Improvements
 
-- Solution URL: [Gradebook](./gradebook.py)
+- Solution URL: [Gradebook](./intro_to_programming/gradebook.py)
   - Have the user input the initial subjects and grades.
   - Have the user be able to alter subjects and grades.
 
@@ -58,7 +58,7 @@ The aim of this project was to create a Python program that asks the user for th
 
 ### Code & Potential Improvements
 
-- Solution URL: [Sal's Shipping](./shipping.py)
+- Solution URL: [Sal's Shipping](./intro_to_programming/shipping.py)
   - Have the user input the packages weight.
 
 ## Magic 8-Ball
@@ -71,7 +71,7 @@ The aim of this project was to create a Python program that can answer any "Yes"
 
 ### Code & Potential Improvements
 
-- Solution URL: [Magic 8-Ball](./magic-8.py)
+- Solution URL: [Magic 8-Ball](./intro_to_programming/magic-8.py)
   - Have the user input their name and question.
 
 # Other
