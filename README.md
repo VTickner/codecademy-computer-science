@@ -25,7 +25,7 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
 
 The aim of this project was to create a Python program that calculates some metrics from lists of data.
 
-- 2D lists of hairstyles, prices and last week's sales are hardcoded into the program.
+- Lists of hairstyles, prices and last week's sales are hardcoded into the program.
 - `for`, list comprehensions, `range()`, `len()` and `if` are used to calculate average prices, decreased prices, total revenue, average daily revenue and types of haircuts that cost less than £30.
 
 ### Code & Potential Improvements
