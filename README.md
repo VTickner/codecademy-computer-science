@@ -11,6 +11,7 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
 - Algorithms
 - Intro To DataStructures
 - [Intro To Programming](#intro-to-programming)
+  - [Getting Ready For Physics Class](#getting-ready-for-physics-class)
   - [Carly's Clippers](#carlys-clippers)
   - [Len's Slice](#lens-slice)
   - [Gradebook](#gradebook)
@@ -20,6 +21,24 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
   - [Author](#author)
 
 # Intro To Programming
+
+## Getting Ready For Physics Class
+
+The aim of this project was to create a Python program that uses functions and `return` to help calculate some fundamental physics properties.
+
+- Functions defined to calculate:
+  - Fahrenheit to Celsius temperatures
+  - Celsius to Fahrenheit temperatures
+  - Force
+  - Energy
+  - Work
+- Values to test the program are hardcoded into the program.
+
+### Code & Potential Improvements
+
+- Solution URL: [Getting Ready For Physics Class](./intro_to_programming/getting_ready_physics_class.py)
+  - Have the user choose which physics property to calculate.
+  - Have the user enter appropriate values for the physics property they have chosen to calculate.
 
 ## Carly's Clippers
 
