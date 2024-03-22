@@ -11,6 +11,7 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
 - Algorithms
 - Intro To DataStructures
 - [Intro To Programming](#intro-to-programming)
+  - [The Bored Tourist](#the-bored-tourist)
   - [Getting Ready For Physics Class](#getting-ready-for-physics-class)
   - [Carly's Clippers](#carlys-clippers)
   - [Len's Slice](#lens-slice)
@@ -21,6 +22,25 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
   - [Author](#author)
 
 # Intro To Programming
+
+## The Bored Tourist
+
+The aim of this project was to create a Python program that uses functions to create a recommendation program based on the traveler's location and their interests (e.g. museum, beach etc) for suggesting appropriate places for them to visit.
+
+- Functions defined to:
+  - Get index of destination from list of destinations.
+  - Get traveler location.
+  - Add attractions for each location.
+  - Find all attractions for a particular destination.
+  - Get attractions for traveler (based on their location and interests).
+- Print out list of suitable attractions to visit for the traveler.
+- Values to test the program are all hardcoded into the program.
+
+### Code & Potential Improvements
+
+- Solution URL: [The Bored Tourist](./intro_to_programming/the_bored_tourist.py)
+  - Have the user enter their details - name, traveler location and interests.
+  - Be able to update lists of locations and attractions interactively.
 
 ## Getting Ready For Physics Class
 
