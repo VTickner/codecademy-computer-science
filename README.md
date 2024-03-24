@@ -11,6 +11,7 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
 - Algorithms
 - Intro To DataStructures
 - [Intro To Programming](#intro-to-programming)
+  - [Thread Shed](#thread-shed)
   - [The Bored Tourist](#the-bored-tourist)
   - [Getting Ready For Physics Class](#getting-ready-for-physics-class)
   - [Carly's Clippers](#carlys-clippers)
@@ -22,6 +23,22 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
   - [Author](#author)
 
 # Intro To Programming
+
+## Thread Shed
+
+The aim of this project was to create a Python program that takes a list of sales information in a string format(customer name, price, colour(s) of thread purchased and date), and then use a variety of techniques to clean up the data into easier-to-access information.
+
+- `string.replace()` used to help with clarifying appropriate sales transaction
+- `string.split()` used to help split up string into appropriate sections.
+- `string.strip()` used to clear up and remove whitespace in transaction information.
+- `for` loops used to iterate through lists of transactions.
+- `list.append` to add information into smaller appropriate groups of lists e.g. customers, sales price and colour of thread purchased.
+- Function defined to calculate the total numbers sold for each colour thread.
+- `print` and `.format()` used to print out a formatted string of the number of each colour thread purchased.
+
+### Code & Potential Improvements
+
+- Solution URL: [Thread Shed](./intro_to_programming/thread_shed.py)
 
 ## The Bored Tourist
 
