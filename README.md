@@ -43,27 +43,27 @@ The aim of this project was to create a Python program that processes some data 
     - Sets `player.title()` so that if names are entered differently with lowercase or uppercase letters they will still match when compared to `player_to_words` dictionary.
     - If player already exists, word is added to their played list in player_to_words dictionary.
     - If player doesn't exist, then the new player along with their word is added to player_to_words dictionary.
-    - Calls `update_point_totals` function.
+    - Calls `update_point_totals()` function.
 
   - `update_point_totals()` updates the total points scored for the player.
 
-    - Calls `score_word` function.
+    - Calls `score_word()` function.
     - If player already exists, points are added to their total score in player_to_points dictionary.
     - If player doesn't exist, then the new player along with their score is added to player_to_points dictionary.
 
   - `score_word()` calculates and returns the points score of a word.
 
-  - `play_round` initialises the program.
+  - `play_round()` initialises the program.
 
     - Gets player name and word from user.
-    - Calls `play_word` function.
-    - Calls `another_round` function.
+    - Calls `play_word()` function.
+    - Calls `another_round()` function.
 
   - `another_round()` asks user whether they wish to enter another player's word.
 
     - Gets Y/N input from user. Input changed to uppercase.
-    - If response is `Y` or `YES`, then calls `play_round()`.
-    - If response not `Y` or `YES`, then calls `show_results()`.
+    - If response is `Y` or `YES`, then calls `play_round()` function.
+    - If response not `Y` or `YES`, then calls `show_results()` function.
 
   - `show_results()` iterates through `player_to_points` dictionary to print out names and total scores of each player.
 
@@ -72,7 +72,7 @@ The aim of this project was to create a Python program that processes some data 
 - Solution URL: [Scrabble](./intro_to_programming/scrabble.py)
   - Remove hardcoded player's data and ask for input of name and word from user - ADDED TO CODE.
   - Check whether more words to be added and scored - ADDED TO CODE.
-  - Show results of players in formatted strings - ADDED TO CODE.
+  - Show overall results of players in formatted strings - ADDED TO CODE.
 
 ## Thread Shed
 
