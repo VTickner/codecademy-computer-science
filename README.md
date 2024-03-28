@@ -11,6 +11,7 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
 - Algorithms
 - Intro To DataStructures
 - [Intro To Programming](#intro-to-programming)
+  - [Hacking The Fender](#hacking-the-fender)
   - [Scrabble](#scrabble)
   - [Thread Shed](#thread-shed)
   - [The Bored Tourist](#the-bored-tourist)
@@ -24,6 +25,25 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
   - [Author](#author)
 
 # Intro To Programming
+
+## Hacking The Fender
+
+The aim of this project was to create a Python program that reads and writes to files. Extracting `Username` information from `passwords.csv` to create a list of user names in `compromised_user.csv`. Creating `boss_message.json` and `new_passwords.csv`.
+
+- Imported `csv`, `json` and `os`.
+- `with open("file_name", "w")` used to write files, "w" omitted when using only for reading.
+- `csv.DictReader()` used to read passwords.csv file.
+- `json.dump(dictionary_name, json_file_name)` used to write information to json file from Python dictionary.
+- `file_object.write("text_to_add")` used to write information to file.
+
+### Code & Potential Improvements
+
+- Solution URL: [Hacking The Fender](./intro_to_programming/hacking_the_fender.py)
+- Other files:
+  - [boss_message.json](./intro_to_programming/boss_message.json)
+  - [compromised_users.txt](./intro_to_programming/compromised_users.txt)
+  - [new_passwords.csv](./intro_to_programming/new_passwords.csv)
+  - [passwords.csv](./intro_to_programming/passwords.csv)
 
 ## Scrabble
 
