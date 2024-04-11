@@ -11,6 +11,7 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
 - Algorithms
 - Intro To DataStructures
 - [Intro To Programming](#intro-to-programming)
+  - [Guess The Number Game](#guess-the-number-game)
   - [Hacking The Fender](#hacking-the-fender)
   - [Scrabble](#scrabble)
   - [Thread Shed](#thread-shed)
@@ -25,6 +26,57 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
   - [Author](#author)
 
 # Intro To Programming
+
+## Guess The Number Game
+
+The aim of this project was to create a Python game that uses classes and objects. I chose to create a number guessing game. The goal of the game is to guess a number between 1 and 20. If the number isn't guessed correctly within 3 goes you lose a game round. There are overall stats that keep track of overall losses and wins for each round played.
+
+- Classes defined to:
+
+  - `Player`:
+
+    - `\_\_init\_\_()` initialises name, lives (3) and creates an instance of GameStats of player.
+    - `\_\_repr\_\_()` states how many lives player has left.
+    - `reduce_life()` decreases the amount of player lives left.
+    - `add_win()` calls GameStats to add a win to the overall game stats.
+    - `add_loss()` calls GameStats to add a loss to the overall game stats.
+
+  - `GameStats`:
+
+    - `\_\_init\_\_()` initialises total wins and losses at 0.
+    - `\_\_repr\_\_()` states overall wins and losses for player.
+    - `add_win()` adds a win to the overall game stats.
+    - `add_loss()` adds a loss to the overall game stats.
+
+  - `GuessTheNumber`:
+    - `\_\_init\_\_()` creates an instance of GameStats to initialise the game stats.
+    - `\_\_repr\_\_()` prints a welcome message to the game.
+    - `play_game()`:
+      - Calls `\_\_repr\_\_()` to print out the welcome message.
+      - Creates an instance of `Player` with the users name that they have entered.
+      - `while` loop to loop around while user wants to continue to play.
+        - Generates random number between 1 and 20 using `import random` and `random.randint(1, 20)`.
+        - `while` loop to loop around while user has lives left.
+          - User enters their guess.
+          - If guess is correct `player.add_win()` is used to add a win to player's overall stats.
+          - If guess is incorrect player loses a life via `player.reduce_life()` and `player()` is called to print the amount of lives left.
+        - Once a player has lost all their lives, the game is over and `player.add_loss()` is used to add a loss to the player's overall stats.
+      - Print out overall game stats for total amount of losses and wins.
+      - Ask if user wants to continue playing another round of the game.
+
+  Create an instance of `GuessTheNumber` and then call `play_game()` to run the game.
+
+### Code & Potential Improvements
+
+- Solution URL: [Guess The Number Game](./intro_to_programming/guess_the_number_game.py)
+  - I didn't follow the exact specifications listed below, as it didn't make sense for this game with regards the amount of instances or attributes. So for potential improvements it would be to make alterations to the game, possibly having 2 players playing at once taking turns to be able to be able to meet the exact specifications below.
+  - Specifications were:
+    - Minimum of 2 classes - DONE
+    - Use constructor \_\_init\_\_() - DONE
+    - Each class to have minimum 3 attributes and 3 methods - GameStats only has 2 attributes
+    - Each class to describe themselves \_\_repr()\_\_ - DONE
+    - Create 2 instances of each class
+    - Create methods / attributes that make classes interact with each other - DONE
 
 ## Hacking The Fender
 
