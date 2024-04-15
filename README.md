@@ -35,24 +35,24 @@ The aim of this project was to create a Python game that uses classes and object
 
   - `Player`:
 
-    - `\_\_init\_\_()` initialises name, lives (3) and creates an instance of GameStats of player.
-    - `\_\_repr\_\_()` states how many lives player has left.
+    - `__init__()` initialises name, lives (3) and creates an instance of GameStats of player.
+    - `__repr__()` states how many lives player has left.
     - `reduce_life()` decreases the amount of player lives left.
     - `add_win()` calls GameStats to add a win to the overall game stats.
     - `add_loss()` calls GameStats to add a loss to the overall game stats.
 
   - `GameStats`:
 
-    - `\_\_init\_\_()` initialises total wins and losses at 0.
-    - `\_\_repr\_\_()` states overall wins and losses for player.
+    - `__init__()` initialises total wins and losses at 0.
+    - `__repr__()` states overall wins and losses for player.
     - `add_win()` adds a win to the overall game stats.
     - `add_loss()` adds a loss to the overall game stats.
 
   - `GuessTheNumber`:
-    - `\_\_init\_\_()` creates an instance of GameStats to initialise the game stats.
-    - `\_\_repr\_\_()` prints a welcome message to the game.
+    - `__init__()` creates an instance of GameStats to initialise the game stats.
+    - `__repr__()` prints a welcome message to the game.
     - `play_game()`:
-      - Calls `\_\_repr\_\_()` to print out the welcome message.
+      - Calls `__repr__()` to print out the welcome message.
       - Creates an instance of `Player` with the users name that they have entered.
       - `while` loop to loop around while user wants to continue to play.
         - Generates random number between 1 and 20 using `import random` and `random.randint(1, 20)`.
@@ -72,9 +72,9 @@ The aim of this project was to create a Python game that uses classes and object
   - I didn't follow the exact specifications listed below, as it didn't make sense for this game with regards the amount of instances or attributes. So for potential improvements it would be to make alterations to the game, possibly having 2 players playing at once taking turns to be able to be able to meet the exact specifications below.
   - Specifications were:
     - Minimum of 2 classes - DONE
-    - Use constructor \_\_init\_\_() - DONE
+    - Use constructor **init**() - DONE
     - Each class to have minimum 3 attributes and 3 methods - GameStats only has 2 attributes
-    - Each class to describe themselves \_\_repr()\_\_ - DONE
+    - Each class to describe themselves **repr()** - DONE
     - Create 2 instances of each class
     - Create methods / attributes that make classes interact with each other - DONE
 
