@@ -72,9 +72,9 @@ The aim of this project was to create a Python game that uses classes and object
   - I didn't follow the exact specifications listed below, as it didn't make sense for this game with regards the amount of instances or attributes. So for potential improvements it would be to make alterations to the game, possibly having 2 players playing at once taking turns to be able to be able to meet the exact specifications below.
   - Specifications were:
     - Minimum of 2 classes - DONE
-    - Use constructor **init**() - DONE
+    - Use constructor `__init__()` - DONE
     - Each class to have minimum 3 attributes and 3 methods - GameStats only has 2 attributes
-    - Each class to describe themselves **repr()** - DONE
+    - Each class to describe themselves `__repr()__` - DONE
     - Create 2 instances of each class
     - Create methods / attributes that make classes interact with each other - DONE
 
