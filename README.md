@@ -36,6 +36,8 @@ The aim of this project was to create a Towers of Hanoi game in Python using sta
 2. Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or on an empty rod.
 3. No disk may be placed on top of a smaller disk.
 
+Towers of Hanoi code:
+
 - Makes use of Node and Stack classes to create the 3 stacks used in the game.
 - Get input from user as to number of disks they want in the game (disks need to be >= 3).
 - Calculates the number of optimal (minimum) moves based on number of disks:
