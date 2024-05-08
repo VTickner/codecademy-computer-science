@@ -9,7 +9,8 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
 - Databases
 - Trees And Graphs
 - Algorithms
-- Intro To DataStructures
+- [Intro To Data Structures](#intro-to-data-structures)
+  - [Towers Of Hanoi](#towers-of-hanoi)
 - [Intro To Programming](#intro-to-programming)
   - [Guess The Number Game](#guess-the-number-game)
   - [Hacking The Fender](#hacking-the-fender)
@@ -24,6 +25,35 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
   - [Magic 8-Ball](#magic-8-ball)
 - [Other](#other)
   - [Author](#author)
+
+# Intro To Data Structures
+
+## Towers Of Hanoi
+
+The aim of this project was to create a Towers of Hanoi game in Python using stacks to implement the game. Towers of Hanoi is an ancient mathematical puzzle that starts off with three stacks and many disks. The objective of the game is to move the stack of disks from the leftmost stack to the rightmost stack. The game follows three rules:
+
+1. Only one disk can be moved at a time.
+2. Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or on an empty rod.
+3. No disk may be placed on top of a smaller disk.
+
+- Makes use of Node and Stack classes to create the 3 stacks used in the game.
+- Get input from user as to number of disks they want in the game (disks need to be >= 3).
+- Calculates the number of optimal (minimum) moves based on number of disks:
+  ```python
+  num_optimal_moves = 2**num_disks - 1
+  ```
+- Get input from user as to which disk to move and where to place. (Checks are made to make sure the stack is not empty that a disk is taken from and also to not place a larger size disk on top of a smaller one.)
+
+  <img src="./intro_to_data_structures/towers-of-hanoi-start-screenshot.jpg" width="500px" />
+  <img src="./intro_to_data_structures/towers-of-hanoi-win-screenshot.jpg" width="500px" />
+
+### Code & Potential Improvements
+
+- Solution URL: [Towers Of Hanoi Game](./intro_to_data_structures/towers_of_hanoi_game.py)
+  - Add a "play the game again" functionality.
+- Other files:
+  - [node.py](./intro_to_data_structures/node.py)
+  - [stack.py](./intro_to_data_structures/stack.py)
 
 # Intro To Programming
 
