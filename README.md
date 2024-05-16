@@ -10,6 +10,7 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
 - Trees And Graphs
 - Algorithms
 - [Intro To Data Structures](#intro-to-data-structures)
+  - [Blossom](#blossom)
   - [Towers Of Hanoi](#towers-of-hanoi)
 - [Intro To Programming](#intro-to-programming)
   - [Guess The Number Game](#guess-the-number-game)
@@ -27,6 +28,29 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
   - [Author](#author)
 
 # Intro To Data Structures
+
+## Blossom
+
+The aim of this project was to implement a hash map to relate the names of flowers with their meanings. Separate chaining using linked lists was used in order to avoid collisions when the hashing function collides the names of two flowers.
+
+Blossom code:
+
+- Makes use of Node and LinkedList classes
+- HashMap class defined to:
+  - `__init__()` initialises a hash map.
+  - `_hash()` creates a hash code.
+  - `_compress()` compresses the hash code so that it fits in size of the data array.
+  - `assign()` adds data to the hash map using separate chaining of linked lists for collisions.
+  - `retrieve()` gets data from the hash map using separate chaining.
+- Creates a hash map utilising flower_definitions data from blossom_lib.
+
+### Code & Potential Improvements
+
+- Solution URL: [Blossom](./intro_to_data_structures/blossom.py)
+- Other files:
+  - [node.py](./intro_to_data_structures/node.py)
+  - [linked_list.py](./intro_to_data_structures/linked_list.py)
+  - [blossom_lib.py](./intro_to_data_structures/blossom_lib.py)
 
 ## Towers Of Hanoi
 
