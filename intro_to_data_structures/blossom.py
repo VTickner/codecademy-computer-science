@@ -4,7 +4,6 @@ from blossom_lib import flower_definitions
 class HashMap:
   def __init__(self, size):
     self.array_size = size
-    # self.array = [None for _ in range(self.array_size)]
     self.array = [LinkedList() for _ in range(self.array_size)]
 
   def _hash(self, key):
@@ -15,7 +14,6 @@ class HashMap:
 
   def assign(self, key, value):
     array_index = self._compress(self._hash(key))
-    # self.array[array_index] = [key, value]
     payload = Node([key, value])
     list_at_array = self.array[array_index]
     for item in list_at_array:
@@ -26,11 +24,6 @@ class HashMap:
   
   def retrieve(self, key):
     array_index = self._compress(self._hash(key))
-    # payload = self.array[array_index][1]
-    # if payload != None and payload[0] == key:
-    #     return payload[1]
-    # else:
-    #   return None
     list_at_index = self.array[array_index]
     for item in list_at_index:
       if item[0] == key:
