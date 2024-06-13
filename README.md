@@ -8,7 +8,8 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
 - Computer Architecture
 - Databases
 - Trees And Graphs
-- Algorithms
+- [Algorithms](#algorithms)
+  - [A Sorted Tale](#a-sorted-tale)
 - [Intro To Data Structures](#intro-to-data-structures)
   - [Blossom](#blossom)
   - [Towers Of Hanoi](#towers-of-hanoi)
@@ -26,6 +27,47 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
   - [Magic 8-Ball](#magic-8-ball)
 - [Other](#other)
   - [Author](#author)
+
+# Algorithms
+
+## A Sorted Tale
+
+The aim of this project was to sort book data information that is read in via csv files and sorted using both bubble sort and quicksort algorithms.
+
+A Sorted Tale code:
+
+- Imports `utils` that reads in csv files.
+- Imports `sorts` that has both a `bubble_sort` and a `quicksort` algorithm functions.
+- Comparison functions were created that allowed both `bubble_sort` and `quicksort` functions to sort as per the comparison requested:
+
+  ```python
+  def by_title_ascending(book_a, book_b):
+    return book_a["title_lower"] > book_b["title_lower"]
+
+  def by_author_ascending(book_a, book_b):
+    return book_a["author_lower"] > book_b["author_lower"]
+
+  def by_total_length(book_a, book_b):
+    return len(book_a["title"]) + len(book_a["author"]) > len(book_b["title"]) + len(book_b["author"])
+  ```
+
+Bubble sort algorithms work well on `books_small.csv` due to small amount of data and on data that is already reasonably sorted. However when applying to `books_large.csv` it noticeably is slow to run.
+
+Quicksort algorithms work far better/quicker than bubble sort algorithms on larger amounts of data like in `books_large.csv`.
+
+### Code & Potential Improvements
+
+- Solution URL: [A Sorted Tale](./algorithms/a_sorted_tale.py)
+  - I added an extra comparison function:
+    ```python
+    def by_title_descending(book_a, book_b):
+      return book_a["title_lower"] < book_b["title_lower"]
+    ```
+- Other files:
+  - [utils.py](./algorithms/utils.py)
+  - [sorts.py](./algorithms/sorts.py)
+  - [books_small.csv](./algorithms/books_small.csv)
+  - [books_large.csv](./algorithms/books_large.csv)
 
 # Intro To Data Structures
 
