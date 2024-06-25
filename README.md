@@ -9,6 +9,7 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
 - Databases
 - Trees And Graphs
 - [Algorithms](#algorithms)
+  - [Longest Common Subsequence](#longest-common-subsequence)
   - [A Sorted Tale](#a-sorted-tale)
 - [Intro To Data Structures](#intro-to-data-structures)
   - [Blossom](#blossom)
@@ -29,6 +30,88 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
   - [Author](#author)
 
 # Algorithms
+
+## Longest Common Subsequence
+
+The aim of this project was to use Dynamic Programming to determine the longest common subsequence between two strings. In other words, what series of letters from left to right do they share? The letters don’t need to be directly next to each other. In this example:
+
+- String 1 = "ACCGTT"
+- String 2 = "CCAGCA"
+- Answer = "CCG"
+
+As I'm new to the concept of Dynamic Programming, I've explained below the code and process for comparing the strings, as a way of helping me remember and understand the process of approaching this algorithm.
+
+For the longest common subsequence, a grid will be needed where the columns are each character from one string, and the rows are each character from the other string. An extra column and row is added to represent an empty string or “no character”. The grid is created by two list comprehensions, one nested inside the other to create the columns and rows.
+
+```python
+grid = [[0 for col in range(len(string_1) + 1)] for row in range(len(string_2) + 1)]
+```
+
+A visual representation of the initial set-up of the grid:
+
+```
+     "" A  C  C  G  T  T
+"" [ 0, 0, 0, 0, 0, 0, 0 ]
+C  [ 0, 0, 0, 0, 0, 0, 0 ]
+C  [ 0, 0, 0, 0, 0, 0, 0 ]
+A  [ 0, 0, 0, 0, 0, 0, 0 ]
+G  [ 0, 0, 0, 0, 0, 0, 0 ]
+C  [ 0, 0, 0, 0, 0, 0, 0 ]
+A  [ 0, 0, 0, 0, 0, 0, 0 ]
+```
+
+Each letter from one string is compared with each letter from the other string.
+
+```python
+for row in range(1, len(string_2) + 1):
+  print("Comparing: {0}".format(string_2[row - 1]))
+
+  for col in range(1, len(string_1) + 1):
+    print("Against: {0}".format(string_1[col - 1]))
+```
+
+To fill in the grid with the comparisons - check if the letters match, if so there is a subsequence of at least 1. Any previous matches live in the cell of the grid that excludes the current characters: `grid[row - 1][col - 1]`. When the characters don't match, a value will be the best that's been seen excluding either character. In other words, the values located at the prior row or column. `max()` is used to return the higher value from `grid[row - 1][col]` and `grid[row][col - 1]`. Once the comparison is finished, the length of the longest common subsequence is located at `grid[-1][-1]`.
+
+```python
+if string_1[col - 1] == string_2[row - 1]:
+  grid[row][col] = grid[row - 1][col - 1] + 1
+else:
+  grid[row][col] = max(grid[row - 1][col], grid[row][col - 1])
+```
+
+A visual representation of the grid after the comparisons have been completed:
+
+```
+     "" A  C  C  G  T  T
+"" [ 0, 0, 0, 0, 0, 0, 0 ]
+C  [ 0, 0, 1, 1, 1, 1, 1 ]
+C  [ 0, 1, 1, 1, 1, 2, 2 ]
+A  [ 0, 1, 1, 1, 2, 2, 2 ]
+G  [ 0, 1, 1, 1, 2, 3, 3 ]
+C  [ 0, 1, 2, 2, 2, 3, 3 ]
+A  [ 0, 1, 2, 2, 3, 3, 3 ]
+```
+
+To find the actual subsequence itself, start from the bottom right cell of the grid, if the indices of each string are matching characters then they get added to the result and the indices are decremented. If they don't match then need to locate the position where they do match. As the answer is appended back to front it needs to be reversed (`answer.reverse()`) to be shown in the correct order.
+
+```python
+answer = []
+while row > 0 and col > 0:
+  if string_1[col - 1] ==  string_2[row - 1]:
+    answer.append(string_1[col -1])
+    col -= 1
+    row -= 1
+  elif grid[row - 1][col] > grid[row][col -1]:
+    row -= 1
+  else:
+    col -= 1
+answer.reverse()
+return "".join(answer)
+```
+
+### Code & Potential Improvements
+
+- Solution URL: [Longest Common Subsequence](./algorithms/longest_common_subsequence.py)
 
 ## A Sorted Tale
 
