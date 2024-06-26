@@ -7,7 +7,8 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
 - Math For Computer Science
 - Computer Architecture
 - Databases
-- Trees And Graphs
+- [Trees And Graphs](#trees-and-graphs)
+  - [Choose Your Own Adventure: Wilderness Escape](#choose-your-own-adventure-wilderness-escape)
 - [Algorithms](#algorithms)
   - [Longest Common Subsequence](#longest-common-subsequence)
   - [A Sorted Tale](#a-sorted-tale)
@@ -28,6 +29,23 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
   - [Magic 8-Ball](#magic-8-ball)
 - [Other](#other)
   - [Author](#author)
+
+# Trees And Graphs
+
+## Choose Your Own Adventure: Wilderness Escape
+
+The aim of this project was create an interactive "choose your own adventure" story. It utilises a tree data structure to hold the story pieces in each node of the tree in order to keep track of the different paths a user might choose.
+
+- `TreeNode` class defined to:
+  - `__init()__` initialises a story piece and an empty array for corresponding choices.
+  - `add_child()` adds a choice for the appropriate story piece.
+  - `traverse()` prints out the root story piece and then obtains the user's choice for which story option to next print out, and continues printing out the user's story choices until the end of the story is reached.
+
+### Code & Potential Improvements
+
+- Solution URL: [Wilderness Escape](./trees_and_graphs/wilderness_escape.py)
+  - Add further story steps, before completion of the story.
+  - Add more than two choices.
 
 # Algorithms
 
