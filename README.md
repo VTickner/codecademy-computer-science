@@ -8,6 +8,7 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
 - Computer Architecture
 - Databases
 - [Trees And Graphs](#trees-and-graphs)
+  - [Build A Routing Program To Help Vancouver Commuters](#build-a-routing-program-to-help-vancouver-commuters)
   - [Choose Your Own Adventure: Wilderness Escape](#choose-your-own-adventure-wilderness-escape)
 - [Algorithms](#algorithms)
   - [Longest Common Subsequence](#longest-common-subsequence)
@@ -31,6 +32,54 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
   - [Author](#author)
 
 # Trees And Graphs
+
+## Build A Routing Program To Help Vancouver Commuters
+
+The aim of this project was to create a routing program that users can select the starting and ending locations based of Vancouver landmarks and for the program to calculate a valid and shortest route between the two locations.
+
+The program utilises graph depth-first (DFS) and breadth-first (BFS) search algorithms to work out whether there is a valid route (DFS) and to find the shortest route (BFS). In this case the shortest route is based off the number of stations along the route rather than time or distance between them.
+
+Build A Routing Program To Help Vancouver Commuters code:
+
+- Imports `graph_search` that has both a `dfs` and `bfs` search functions.
+- Imports `vc_metro` that has a dictionary of stations and connections to other stations.
+- Imports `vc_landmarks` that has a dictionary of landmarks and their associated stations.
+- Imports `landmark_choices` that has a dictionary containing landmarks with associated keys to make it easier to select start and end destinations.
+- Functions defined to:
+  - `greet()` prints out a welcome message.
+  - `get_start()` gets input from user for their starting location utilising dictionary keys `landmark_choices.keys()` to select the starting location.
+  - `get_end()` gets input from user for their ending location utilising dictionary keys `landmark_choices.keys()` to select the ending location.
+  - `set_start_and_end()` takes the user input to set the starting and end locations and also allows to change either start, end or both locations for the route.
+  - `show_landmarks()` allows the user to print out the landmarks with their associated initial keys.
+  - `new_route()` prints out whether there is a valid route and if so prints out the shortest route. It also allows the user to calculate another route.
+  - `get_route()` calculates the route based off which stations are by the selected start and end landmarks. It calculates whether a route exists, and if there are any (closed) stations under construction that will impact a possible route. If a possible route exists it calculates the shortest route.
+  - `get_active_stations()` updates the list of possible open stations, if any stations are currently marked as closed then that will be reflected in the list.
+  - `goodbye()` prints out a goodbye message.
+  - `skyroute()` that calls the main program functions and is utilised to run the program.
+
+### Code & Potential Improvements
+
+- Solution URL: [Build A Routing Program To Help Vancouver Commuters](./trees_and_graphs/skyroute.py)
+
+  - I added an extra comparison check in `new_route()` to check that the start and end points are not the same.
+  - I added an extra function `set_inactive_stations()` to allow the user to enter station names that are not open for use, allowing the program to be updated with current station closures, for more accurate route planning.
+
+    ```python
+    def set_inactive_stations():
+      update_stations_closed = input("Do you wish to add stations that are closed for maintenance? Enter y/n: ")
+      if update_stations_closed == "y":
+        num_stations_closed = int(input("How many stations are under construction? "))
+        for num in range(num_stations_closed):
+          station = input("Enter station name {0}: ".format(num + 1))
+          stations_under_construction.append(station)
+        return stations_under_construction
+    ```
+
+- Other files:
+  - [graph_search.py](./trees_and_graphs/graph_search.py)
+  - [landmark_choices.py](./trees_and_graphs/landmark_choices.py)
+  - [vc_landmarks.py](./trees_and_graphs/vc_landmarks.py)
+  - [vc_metro.py](./trees_and_graphs/vc_metro.py)
 
 ## Choose Your Own Adventure: Wilderness Escape
 
