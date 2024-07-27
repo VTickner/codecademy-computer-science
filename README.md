@@ -41,7 +41,6 @@ The aim of this project was to find the shortest path between each city that a t
 - Imports `Graph` that finds paths, adds edges and vertices.
 - Imports `Vertex` that gets edges and edge weights and adds edge weights
 - Functions defined to:
-  - `print_graph()`
   - `visited_all_nodes()` checks whether all vertices in the graph have been visited or not.
   - `traveling_salesperson()` takes a graph as a parameter and outputs the final path.
     - Sets all vertices in the graph as unvisited initially and are contained within a dictionary.
