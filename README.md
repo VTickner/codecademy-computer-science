@@ -8,6 +8,7 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
 - Computer Architecture
 - Databases
 - [Trees And Graphs](#trees-and-graphs)
+  - [Traveling Salesperson](#traveling-salesperson)
   - [Build A Routing Program To Help Vancouver Commuters](#build-a-routing-program-to-help-vancouver-commuters)
   - [Choose Your Own Adventure: Wilderness Escape](#choose-your-own-adventure-wilderness-escape)
 - [Algorithms](#algorithms)
@@ -32,6 +33,36 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
   - [Author](#author)
 
 # Trees And Graphs
+
+## Traveling Salesperson
+
+The aim of this project was to find the shortest path between each city that a traveling salesperson is to visit, and ending back up in the city where the salesperson started from. Unlike in the previous program [Build A Routing Program To Help Vancouver Commuters](#build-a-routing-program-to-help-vancouver-commuters) the distance between the places is taken into account with regards calculating the shortest distance.
+
+- Imports `Graph` that finds paths, adds edges and vertices.
+- Imports `Vertex` that gets edges and edge weights and adds edge weights
+- Functions defined to:
+  - `print_graph()`
+  - `visited_all_nodes()` checks whether all vertices in the graph have been visited or not.
+  - `traveling_salesperson()` takes a graph as a parameter and outputs the final path.
+    - Sets all vertices in the graph as unvisited initially and are contained within a dictionary.
+    - Selects an initial vertex at random and marks it as visited and adds it to the path.
+    - Checks whether all nodes have been visited in the graph, whilst not all have been visited:
+      - Creates a dictionary containing edges connected to the current vertex and their edge weights.
+      - Checks to find the next vertex:
+        - If there are no edge weights for the current vertex then break out of the loop.
+        - Otherwise, select the minimum weight edge and check whether it points to a vertex that has already been visited or not. If unvisited then the next vertex has been found. If visited then pop off the edge weight and check the next edge weight.
+      - If the dictionary of edge weights is empty, then all vertices have been visited.
+      - Otherwise, the next vertex is made the current vertex and marked as visited and added to the path.
+      - Checks whether all nodes have been visited in the graph.
+    - Outputs the path.
+
+### Code & Potential Improvements
+
+- Solution URL: [Traveling Salesperson](./trees_and_graphs/traveling_salesperson.py)
+
+- Other files:
+  - [Graph.py](./trees_and_graphs/Graph.py)
+  - [Vertex.py](./trees_and_graphs/Vertex.py)
 
 ## Build A Routing Program To Help Vancouver Commuters
 
