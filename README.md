@@ -2,6 +2,11 @@
 
 These projects were created as part of [Codecademy's](https://www.codecademy.com) Computer Science Career Path course. (Latest projects are added to the top of the list.)
 
+There were several portfolio projects created as part of this course. As they were larger and more extensive programs they can be found in their own repositories:
+
+- [Portfolio Project: Recommendation Software](https://github.com/VTickner/codecademy-recommendation-software)
+- [Portfolio Project: Python Terminal Game](https://github.com/VTickner/codecademy-python-terminal-game)
+
 ## Table of contents
 
 - Math For Computer Science
