@@ -11,7 +11,8 @@ There were several portfolio projects created as part of this course. As they we
 
 - Math For Computer Science
 - Computer Architecture
-- Databases
+- [Databases](#databases)
+  - [Create A Table](#create-a-table)
 - [Trees And Graphs](#trees-and-graphs)
   - [Traveling Salesperson](#traveling-salesperson)
   - [Build A Routing Program To Help Vancouver Commuters](#build-a-routing-program-to-help-vancouver-commuters)
@@ -36,6 +37,23 @@ There were several portfolio projects created as part of this course. As they we
   - [Magic 8-Ball](#magic-8-ball)
 - [Other](#other)
   - [Author](#author)
+
+# Databases
+
+## Create A Table
+
+The aim of this project was to create a friends table and add/delete data to it using basic SQL commands.
+
+- `CREATE TABLE table_name (column_name data_type);`
+- `INSERT INTO table_name (column_name) VALUES (data);`
+- `SELECT column_name or * FROM table_name;`
+- `UPDATE table_name SET column_name = data;`
+- `ALTER TABLE table_name ADD COLUMN column_name data_type;`
+- `DELETE FROM table_name WHERE column_name = data;`
+
+### Code & Potential Improvements
+
+- Solution URL: [Create A Table](./databases/create_a_table.sql)
 
 # Trees And Graphs
 
