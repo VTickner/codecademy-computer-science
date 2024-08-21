@@ -53,7 +53,7 @@ The aim of this project was make queries to a database table of restaurant infor
 - `WHERE column_name condition AND or OR column_name condition;`
 - `WHERE column_name IS NULL;`
 - `ORDER BY column_name DESC LIMIT number;`
-- Also used CASE/WHEN/THEN/ELSE/END AS
+- Also used `CASE`, `WHEN`, `THEN`, `ELSE`, `END AS`
   ```sql
   SELECT name,
     CASE
