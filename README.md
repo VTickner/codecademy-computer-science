@@ -12,6 +12,7 @@ There were several portfolio projects created as part of this course. As they we
 - Math For Computer Science
 - Computer Architecture
 - [Databases](#databases)
+  - [New York Restaurants](#new-york-restaurants)
   - [Create A Table](#create-a-table)
 - [Trees And Graphs](#trees-and-graphs)
   - [Traveling Salesperson](#traveling-salesperson)
@@ -39,6 +40,35 @@ There were several portfolio projects created as part of this course. As they we
   - [Author](#author)
 
 # Databases
+
+## New York Restaurants
+
+The aim of this project was make queries to a database table of restaurant information using SQL commands. The database table has the following schema:
+
+![Schema for New York Restaurants database table](./databases/schema_new_york_restaurants.jpg)
+
+- `SELECT DISTINCT column_name FROM table_name;`
+- `WHERE column_name condition;`
+- `WHERE column_name LIKE pattern;`
+- `WHERE column_name condition AND or OR column_name condition;`
+- `WHERE column_name IS NULL;`
+- `ORDER BY column_name DESC LIMIT number;`
+- Also used CASE/WHEN/THEN/ELSE/END AS
+  ```sql
+  SELECT name,
+    CASE
+      WHEN review > 4.5 THEN 'Extraordinary'
+      WHEN review > 4 THEN 'Excellent'
+      WHEN review > 3 THEN 'Good'
+      WHEN review > 2 THEN 'Fair'
+      ELSE 'Poor'
+    END AS 'Review'
+  FROM nomnom;
+  ```
+
+### Code & Potential Improvements
+
+- Solution URL: [New York Restaurants](./databases/new_york_restaurants.sql)
 
 ## Create A Table
 
