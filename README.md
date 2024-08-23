@@ -12,6 +12,7 @@ There were several portfolio projects created as part of this course. As they we
 - Math For Computer Science
 - Computer Architecture
 - [Databases](#databases)
+  - [Analyse Hacker News Trends](#analyse-hacker-news-trends)
   - [Trends In Startups](#trends-in-startups)
   - [New York Restaurants](#new-york-restaurants)
   - [Create A Table](#create-a-table)
@@ -42,9 +43,30 @@ There were several portfolio projects created as part of this course. As they we
 
 # Databases
 
+## Analyse Hacker News Trends
+
+The aim of this project was make queries to a database table of Hacker News stories information using SQL commands knowledge to date and along with `strftime()` function. The database table has the following schema:
+
+![Schema for Analyse Hacker News Trends database table](./databases/schema_analyse_hacker_news_trends.jpg)
+
+- Example use of `strftime()` where it was used to find the best time for users to post news stories to get the best scores:
+  ```sql
+  SELECT strftime('%H', timestamp) AS 'Hour',
+    ROUND(AVG(score), 1) AS 'Average Score',
+    COUNT(*) AS 'Number of Stories'
+  FROM hacker_news
+  WHERE timestamp IS NOT NULL
+  GROUP BY 1
+  ORDER BY 2 DESC;
+  ```
+
+### Code & Potential Improvements
+
+- Solution URL: [Analyse Hacker News Trends](./databases/analyse_hacker_news_trends.sql)
+
 ## Trends In Startups
 
-The aim of this project was make queries using aggregate functions to a database table of startup compnanies information using SQL commands. The database table has the following schema:
+The aim of this project was make queries using aggregate functions to a database table of startup companies information using SQL commands. The database table has the following schema:
 
 ![Schema for Trends In Startups database table](./databases/schema_trends_in_startups.jpg)
 
