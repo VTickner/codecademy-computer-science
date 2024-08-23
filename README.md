@@ -12,6 +12,7 @@ There were several portfolio projects created as part of this course. As they we
 - Math For Computer Science
 - Computer Architecture
 - [Databases](#databases)
+  - [Trends In Startups](#trends-in-startups)
   - [New York Restaurants](#new-york-restaurants)
   - [Create A Table](#create-a-table)
 - [Trees And Graphs](#trees-and-graphs)
@@ -40,6 +41,20 @@ There were several portfolio projects created as part of this course. As they we
   - [Author](#author)
 
 # Databases
+
+## Trends In Startups
+
+The aim of this project was make queries using aggregate functions to a database table of startup compnanies information using SQL commands. The database table has the following schema:
+
+![Schema for Trends In Startups database table](./databases/schema_trends_in_startups.jpg)
+
+- Aggregate functions used: `COUNT()`, `SUM()`, `MAX()`, `MIN()`, `AVG()`, `ROUND()`
+- `GROUP BY column_name;`
+- `HAVING aggregrate function conditon;`
+
+### Code & Potential Improvements
+
+- Solution URL: [Trends In Startups](./databases/trends_in_startups.sql)
 
 ## New York Restaurants
 
