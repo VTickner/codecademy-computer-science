@@ -12,6 +12,7 @@ There were several portfolio projects created as part of this course. As they we
 - Math For Computer Science
 - Computer Architecture
 - [Databases](#databases)
+  - [Lyft Trip Data](#lyft-trip-data)
   - [Analyse Hacker News Trends](#analyse-hacker-news-trends)
   - [Trends In Startups](#trends-in-startups)
   - [New York Restaurants](#new-york-restaurants)
@@ -42,6 +43,31 @@ There were several portfolio projects created as part of this course. As they we
   - [Author](#author)
 
 # Databases
+
+## Lyft Trip Data
+
+The aim of this project was make queries to a database containing multiple tables of Lyft trip data information using SQL commands knowledge to date and using `JOIN` and `UNION` commands. The database tables have the following schema:
+
+![Schema for Lyft Trip Data database tables](./databases/schema_lyft_trip_data.jpg)
+
+- Example use of `LEFT JOIN` where it was used to create a trip log with the trips and its users:
+  ```sql
+  SELECT trips.date,
+    trips.pickup,
+    trips.dropoff,
+    trips.type,
+    trips.cost,
+    riders.first,
+    riders.last,
+    riders.username
+  FROM trips
+  LEFT JOIN riders
+    ON trips.rider_id = riders.id;
+  ```
+
+### Code & Potential Improvements
+
+- Solution URL: [Lyft Trip Data](./databases/lyft_trip_data.sql)
 
 ## Analyse Hacker News Trends
 
