@@ -12,6 +12,7 @@ There were several portfolio projects created as part of this course. As they we
 - Math For Computer Science
 - Computer Architecture
 - [Databases](#databases)
+  - [The Best Of Baseball Awards](#the-best-of-baseball-awards)
   - [Lyft Trip Data](#lyft-trip-data)
   - [Analyse Hacker News Trends](#analyse-hacker-news-trends)
   - [Trends In Startups](#trends-in-startups)
@@ -43,6 +44,32 @@ There were several portfolio projects created as part of this course. As they we
   - [Author](#author)
 
 # Databases
+
+## The Best Of Baseball Awards
+
+The aim of this project was make queries to a database containing multiple tables of baseball information containing information from 1871 to 2019 about players, teams, managers, salaries and plenty more (based off [Sean Lahman's database](http://www.seanlahman.com/)) using SQL commands.
+
+- For the create your own award question, I did a variation of one of the previous questions (seeing as I know nothing about baseball). Worst Bang For Their Buck Award - This award goes to the team that has the largest "cost per win" in any given year. Answer apparently is New York Yankees, with 85 team wins in 2013, at $2,729,163 cost per win.
+  ```sql
+  SELECT
+    ROUND(SUM(salaries.salary) / teams.w) AS "Cost Per Win",
+    teams.w AS "Team Wins",
+    teams.name AS "Team Name",
+    salaries.yearid AS "Year"
+  FROM salaries
+  JOIN teams
+    ON salaries.teamid = teams.teamid
+    AND salaries.yearid = teams.yearid
+  GROUP BY
+    teams.name,
+    salaries.yearid,
+    teams.w
+  ORDER BY 1 DESC;
+  ```
+
+### Code & Potential Improvements
+
+- Solution URL: [The Best Of Baseball Awards](./databases/the_best_of_baseball_awards.sql)
 
 ## Lyft Trip Data
 
