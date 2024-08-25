@@ -12,6 +12,7 @@ There were several portfolio projects created as part of this course. As they we
 - Math For Computer Science
 - Computer Architecture
 - [Databases](#databases)
+  - [Build A Menu For Bytes Of China](#build-a-menu-for-bytes-of-china)
   - [The Best Of Baseball Awards](#the-best-of-baseball-awards)
   - [Lyft Trip Data](#lyft-trip-data)
   - [Analyse Hacker News Trends](#analyse-hacker-news-trends)
@@ -44,6 +45,35 @@ There were several portfolio projects created as part of this course. As they we
   - [Author](#author)
 
 # Databases
+
+## Build A Menu For Bytes Of China
+
+The aim of this project was to design a database schema based around a fictional restaurant "Bytes of China" and perform the following tasks:
+
+- Create tables
+- Define relationships between tables
+- Designate appropriate columns as keys
+- Insert sample data and
+- Make queries from the database
+
+The database has the following schema:
+
+![Schema for Bytes of China database tables](./databases/schema_bytes_of_china.png)
+
+I learnt how to use [dbdiagram.io](https://dbdiagram.io) to create an accurate schema and also how to validate and check keys and relationships in the database using `information_schema.key_column_usage`:
+
+```sql
+SELECT
+   constraint_name,
+   table_name,
+   column_name
+FROM information_schema.key_column_usage
+WHERE table_name = 'restaurant';
+```
+
+### Code & Potential Improvements
+
+- Solution URL: [Build A Menu For Bytes Of China](./databases/build_a_menu_for_bytes_of_china.sql)
 
 ## The Best Of Baseball Awards
 
