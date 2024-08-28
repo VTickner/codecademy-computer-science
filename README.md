@@ -12,6 +12,7 @@ There were several portfolio projects created as part of this course. As they we
 - Math For Computer Science
 - Computer Architecture
 - [Databases](#databases)
+  - [Database Triggers](#database-triggers)
   - [Build A Menu For Bytes Of China](#build-a-menu-for-bytes-of-china)
   - [The Best Of Baseball Awards](#the-best-of-baseball-awards)
   - [Lyft Trip Data](#lyft-trip-data)
@@ -45,6 +46,28 @@ There were several portfolio projects created as part of this course. As they we
   - [Author](#author)
 
 # Databases
+
+## Database Triggers
+
+The aim of this project was to record when customer information is modified utilising the tables `customers` and `customers_log` by using `CREATE TRIGGER`.
+
+- Examples of how to use triggers to record changes made to data:
+
+  ```sql
+  CREATE TRIGGER customer_updated
+  BEFORE UPDATE ON customers
+  FOR EACH ROW
+  EXECUTE PROCEDURE log_customers_change();
+
+  CREATE TRIGGER customer_insert
+  AFTER INSERT ON customers
+  FOR EACH STATEMENT
+  EXECUTE PROCEDURE log_customers_change();
+  ```
+
+### Code & Potential Improvements
+
+- Solution URL: [Database Triggers](./databases/database_triggers.sql)
 
 ## Build A Menu For Bytes Of China
 
