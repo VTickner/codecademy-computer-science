@@ -12,6 +12,7 @@ There were several portfolio projects created as part of this course. As they we
 - Math For Computer Science
 - Computer Architecture
 - [Databases](#databases)
+  - [Designing A Database From Scratch](#designing-a-database-from-scratch)
   - [Database Triggers](#database-triggers)
   - [Build A Menu For Bytes Of China](#build-a-menu-for-bytes-of-china)
   - [The Best Of Baseball Awards](#the-best-of-baseball-awards)
@@ -46,6 +47,30 @@ There were several portfolio projects created as part of this course. As they we
   - [Author](#author)
 
 # Databases
+
+## Designing A Database From Scratch
+
+The aims of this project were to:
+
+- Design a database schema on any topic.
+- Implement the schema using Postbird (which is an open source PostgreSQL GUI client).
+
+I chose to design a database around a hypothetical UK secondary school. I focused the database around people who would be closely associated with the school and how they linked together to decide on what information to add and how to organise it. I designed the following schema for the database (I've included the [DBML database markup language file](./databases/school.dbml)):
+
+![Schema for school database tables](./databases/schema_school.png)
+
+I got ChatGPT to generate hypothetical data based of the schema:
+
+![Generated hypothetical data for school database tables](./databases/chatgpt_school_generated_data.jpg)
+
+While using ChatGPT helped speed up the generation of data, it didn't keep the data consistent to what it was supposed to add for each individual. For instance, it added a staff member with a note to state they were an art teacher, but never added art teacher as a job. So there were some inconsistencies when trying to add the data that I needed to clear up when inserting data into the table.
+
+### Code & Potential Improvements
+
+- Solution URL: [Designing A Database From Scratch](./databases/school.sql)
+
+- Originally I had most of the tables have id integers as primary keys, but I found that was extremely confusing when trying to add data, and double-checking what was in the table content (when viewing the database information). So I re-started the schema and database creation to simplify it and make the information more easily readable and understandable.
+- I also added a few test queries to check that I could pull out information appropriately and as expected.
 
 ## Database Triggers
 
