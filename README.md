@@ -12,6 +12,7 @@ There were several portfolio projects created as part of this course. As they we
 - Math For Computer Science
 - Computer Architecture
 - [Databases](#databases)
+  - [Building An Inventory Database With PostgreSQL](#building-an-inventory-database-with-postgresql)
   - [Designing A Database From Scratch](#designing-a-database-from-scratch)
   - [Database Triggers](#database-triggers)
   - [Build A Menu For Bytes Of China](#build-a-menu-for-bytes-of-china)
@@ -47,6 +48,26 @@ There were several portfolio projects created as part of this course. As they we
   - [Author](#author)
 
 # Databases
+
+## Building An Inventory Database With PostgreSQL
+
+The aim of this project was to set constraints on a database used for keeping track of parts, their manufacturer, location in storeroom, inventory etc, to enable data quality checks to ensure that only valid data can be entered into the database.
+
+The database had the initial following schema:
+
+![Schema for Building An Inventory Database With PostgreSQL database tables](./databases/schema_building_an_inventory_db.jpg)
+
+To ensure data quality the following were utilised on the tables as appropriate:
+
+- `ADD UNIQUE (column_name)`
+- `ALTER COLUMN column_name SET NOT NULL`
+- `ADD CHECK (appropriate limitation)`
+- `ADD PRIMARY KEY (column_name)`
+- `ADD FOREIGN KEY (column_name) REFERENCES table_name(column_name)`
+
+### Code & Potential Improvements
+
+- Solution URL: [Building An Inventory Database With PostgreSQL](./databases/building_an_inventory_database_with_postgresql.sql)
 
 ## Designing A Database From Scratch
 
