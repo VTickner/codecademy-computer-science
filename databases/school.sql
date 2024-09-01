@@ -316,47 +316,47 @@ VALUES
 -- Running a few test queries:
 -- See which GCSE students are doing computing
 SELECT
-	p.first_name,
+  p.first_name,
   p.last_name,
   s.tutor_group,
   sc.subject_choice
 FROM person AS p
 JOIN student AS s
-	ON p.id = s.person_id
+  ON p.id = s.person_id
 JOIN student_subject_choice AS sc
-	ON s.id = sc.student_id
+  ON s.id = sc.student_id
 WHERE
-	sc.subject_choice = 'Computing';
+  sc.subject_choice = 'Computing';
 
 -- See which students are not yet doing GCSEs
 SELECT
-	p.first_name,
+  p.first_name,
   p.last_name,
   s.tutor_group
 FROM person AS p
 JOIN student AS s
-	ON p.id = s.person_id
+  ON p.id = s.person_id
 LEFT JOIN student_subject_choice AS sc
-	ON s.id = sc.student_id
+  ON s.id = sc.student_id
 WHERE
-	sc.student_id IS NULL;
+  sc.student_id IS NULL;
 
 -- Find all staff in the Mathematics department (make sure names only repeated once)
 SELECT
-	p.first_name,
+  p.first_name,
   p.last_name,
   j.department_name,
-  MIN(j.job_title) AS job_title
+  MIN(j.job_title) AS job_title  -- select single job title for each staff member
 FROM person AS p
 JOIN staff AS s
-	ON p.id = s.person_id
+  ON p.id = s.person_id
 JOIN staff_job AS sj
-	ON s.id = sj.staff_id
+  ON s.id = sj.staff_id
 JOIN job AS j
-	ON sj.job_title = j.job_title
+  ON sj.job_title = j.job_title
 WHERE
-	j.department_name = 'Mathematics'
+  j.department_name = 'Mathematics'
 GROUP BY
-	p.first_name,
+  p.first_name,
   p.last_name,
   j.department_name;

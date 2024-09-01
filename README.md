@@ -55,7 +55,7 @@ The aims of this project were to:
 - Design a database schema on any topic.
 - Implement the schema using Postbird (which is an open source PostgreSQL GUI client).
 
-I chose to design a database around a hypothetical UK secondary school. I focused the database around people who would be closely associated with the school and how they linked together to decide on what information to add and how to organise it. I designed the following schema for the database (I've included the [DBML database markup language file](./databases/school.dbml)):
+I chose to design a database around a hypothetical UK secondary school. I focused the database around people who would be closely associated with the school and how they are linked together to decide on what information to add and how to organise it. I designed the following schema for the database (I've included the [DBML database markup language file](./databases/school.dbml)):
 
 ![Schema for school database tables](./databases/schema_school.png)
 
