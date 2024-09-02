@@ -12,6 +12,7 @@ There were several portfolio projects created as part of this course. As they we
 - Math For Computer Science
 - Computer Architecture
 - [Databases](#databases)
+  - [Data Exchange Service](#data-exchange-service)
   - [Building An Inventory Database With PostgreSQL](#building-an-inventory-database-with-postgresql)
   - [Designing A Database From Scratch](#designing-a-database-from-scratch)
   - [Database Triggers](#database-triggers)
@@ -48,6 +49,24 @@ There were several portfolio projects created as part of this course. As they we
   - [Author](#author)
 
 # Databases
+
+## Data Exchange Service
+
+The aim of this project was to set up permissions on a PostgreSQL database that is storing data for a data sharing application that allows users to share datasets and metadata. A few select data publishers have been given access to the database and permissions need to be set up that allow these publishers to get relevant information about how users are interacting with the data they’ve uploaded.
+
+- `SELECT current_user;`
+- `SET ROLE role_name;`
+- `CREATE ROLE role_name WITH role_types;`
+- `CREATE ROLE role_group_name WITH role_types ROLE role_name;`
+- `GRANT usage_type ON SCHEMA database_name TO role_group_name;`
+- `GRANT usage_type ON ALL TABLES IN SCHEMA database_name TO role_group_name;`
+- `SELECT * FROM information_schema.table_privileges;`
+- `CREATE POLICY policy_name ON database_name.table_name FOR usage_type TO role_group_name USING (appropriate limitation);`
+- `ALTER TABLE database_name.table_name ENABLE ROW LEVEL SECURITY;`
+
+### Code & Potential Improvements
+
+- Solution URL: [Data Exchange Service](./databases/data_exchange_service.sql)
 
 ## Building An Inventory Database With PostgreSQL
 
