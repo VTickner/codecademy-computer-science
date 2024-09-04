@@ -12,6 +12,7 @@ There were several portfolio projects created as part of this course. As they we
 - Math For Computer Science
 - Computer Architecture
 - [Databases](#databases)
+  - [Bookstore Indexes](#bookstore-indexes)
   - [Data Exchange Service](#data-exchange-service)
   - [Building An Inventory Database With PostgreSQL](#building-an-inventory-database-with-postgresql)
   - [Designing A Database From Scratch](#designing-a-database-from-scratch)
@@ -49,6 +50,31 @@ There were several portfolio projects created as part of this course. As they we
   - [Author](#author)
 
 # Databases
+
+## Bookstore Indexes
+
+The aim of this project was to analyse runtime and size of a database and the impact of creating indexes on tables.
+
+- `EXPLAN ANALYZE` to look at runtime
+- `pg_size_pretty(pg_total_relation_size('table_name')` to look at size
+
+```sql
+EXPLAIN ANALYZE SELECT
+  original_language,
+  title,
+  sales_in_millions
+FROM books
+WHERE original_language = 'French';
+
+SELECT pg_size_pretty(pg_total_relation_size('books'));
+
+CREATE INDEX books_original_language_title_sales_in_millions_idx
+ON books(original_language, title, sales_in_millions);
+```
+
+### Code & Potential Improvements
+
+- Solution URL: [Bookstore Indexes](./databases/bookstore_indexes.sql)
 
 ## Data Exchange Service
 
