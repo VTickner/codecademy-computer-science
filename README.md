@@ -12,6 +12,7 @@ There were several portfolio projects created as part of this course. As they we
 - Math For Computer Science
 - Computer Architecture
 - [Databases](#databases)
+  - [Intermediate Bookstore Indexes](#intermediate-bookstore-indexes)
   - [Bookstore Indexes](#bookstore-indexes)
   - [Data Exchange Service](#data-exchange-service)
   - [Building An Inventory Database With PostgreSQL](#building-an-inventory-database-with-postgresql)
@@ -51,11 +52,30 @@ There were several portfolio projects created as part of this course. As they we
 
 # Databases
 
+## Intermediate Bookstore Indexes
+
+The aim of this project was to analyse runtime of adding more complex indexes to the previous [Bookstore Indexes](#bookstore-indexes) project.
+
+- Use of `WHERE` conditions on analysing and indexing
+
+```sql
+CREATE INDEX orders_total_price_over_100_idx
+ON orders((quantity * price_base > 100));
+
+EXPLAIN ANALYZE SELECT *
+FROM orders
+WHERE (quantity * price_base > 100);
+```
+
+### Code & Potential Improvements
+
+- Solution URL: [Intermediate Bookstore Indexes](./databases/intermediate_bookstore_indexes.sql)
+
 ## Bookstore Indexes
 
 The aim of this project was to analyse runtime and size of a database and the impact of creating indexes on tables.
 
-- `EXPLAN ANALYZE` to look at runtime
+- `EXPLAIN ANALYZE` to look at runtime
 - `pg_size_pretty(pg_total_relation_size('table_name')` to look at size
 
 ```sql
