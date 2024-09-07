@@ -12,6 +12,7 @@ There were several portfolio projects created as part of this course. As they we
 - Math For Computer Science
 - Computer Architecture
 - [Databases](#databases)
+  - [Database Normalisation At Fred's Furniture](#database-normalisation-at-freds-furniture)
   - [Intermediate Bookstore Indexes](#intermediate-bookstore-indexes)
   - [Bookstore Indexes](#bookstore-indexes)
   - [Data Exchange Service](#data-exchange-service)
@@ -52,20 +53,61 @@ There were several portfolio projects created as part of this course. As they we
 
 # Databases
 
+## Database Normalisation At Fred's Furniture
+
+The aim of this project was to normalise a database by creating a new set of tables that contain all of the same information from the table `store`.
+
+The database had the initial following schema:
+
+![Original schema for Database Normalisation At Fred's Furniture database table](./databases/schema_fred_furniture.png)
+
+The database then was normalised and now has the following schema:
+
+![Normalised schema for Database Normalisation At Fred's Furniture database tables](./databases/schema_fred_furniture_normalised.png)
+
+- Created tables based from the original `store` table by using a `SELECT` query (example below) as part of the `CREATE TABLE` statement:
+
+  ```sql
+  CREATE TABLE items AS
+    SELECT DISTINCT
+      item_1_id AS item_id,
+      item_1_name AS item_name,
+      item_1_price AS item_price
+    FROM store
+    UNION
+    SELECT DISTINCT
+      item_2_id AS item_id,
+      item_2_name AS item_name,
+      item_2_price AS item_price
+    FROM store
+    WHERE item_2_id IS NOT NULL
+    UNION
+    SELECT DISTINCT
+      item_3_id AS item_id,
+      item_3_name AS item_name,
+      item_3_price AS item_price
+    FROM store
+    WHERE item_3_id IS NOT NULL;
+  ```
+
+### Code & Potential Improvements
+
+- Solution URL: [Database Normalisation At Fred's Furniture](./databases/database_normalisation_at_fred_furniture.sql)
+
 ## Intermediate Bookstore Indexes
 
 The aim of this project was to analyse runtime of adding more complex indexes to the previous [Bookstore Indexes](#bookstore-indexes) project.
 
 - Use of `WHERE` conditions on analysing and indexing
 
-```sql
-CREATE INDEX orders_total_price_over_100_idx
-ON orders((quantity * price_base > 100));
+  ```sql
+  CREATE INDEX orders_total_price_over_100_idx
+  ON orders((quantity * price_base > 100));
 
-EXPLAIN ANALYZE SELECT *
-FROM orders
-WHERE (quantity * price_base > 100);
-```
+  EXPLAIN ANALYZE SELECT *
+  FROM orders
+  WHERE (quantity * price_base > 100);
+  ```
 
 ### Code & Potential Improvements
 
@@ -78,19 +120,19 @@ The aim of this project was to analyse runtime and size of a database and the im
 - `EXPLAIN ANALYZE` to look at runtime
 - `pg_size_pretty(pg_total_relation_size('table_name')` to look at size
 
-```sql
-EXPLAIN ANALYZE SELECT
-  original_language,
-  title,
-  sales_in_millions
-FROM books
-WHERE original_language = 'French';
+  ```sql
+  EXPLAIN ANALYZE SELECT
+    original_language,
+    title,
+    sales_in_millions
+  FROM books
+  WHERE original_language = 'French';
 
-SELECT pg_size_pretty(pg_total_relation_size('books'));
+  SELECT pg_size_pretty(pg_total_relation_size('books'));
 
-CREATE INDEX books_original_language_title_sales_in_millions_idx
-ON books(original_language, title, sales_in_millions);
-```
+  CREATE INDEX books_original_language_title_sales_in_millions_idx
+  ON books(original_language, title, sales_in_millions);
+  ```
 
 ### Code & Potential Improvements
 
