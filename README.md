@@ -12,6 +12,7 @@ There were several portfolio projects created as part of this course. As they we
 - Math For Computer Science
 - Computer Architecture
 - [Databases](#databases)
+  - [Traffic Analytics](#traffic-analytics)
   - [Database Normalisation At Fred's Furniture](#database-normalisation-at-freds-furniture)
   - [Intermediate Bookstore Indexes](#intermediate-bookstore-indexes)
   - [Bookstore Indexes](#bookstore-indexes)
@@ -52,6 +53,24 @@ There were several portfolio projects created as part of this course. As they we
   - [Author](#author)
 
 # Databases
+
+## Traffic Analytics
+
+The aim of this project was to use what has been learned in the course about database maintenance to manage a table, `sensors.observations` that receives constant updates.
+
+- Use of `TRUNCATE` and `VACUUM` to help clear up space from deleted/updated data.
+- Use of the following to help check files sizes of tables, indexes and total sizes:
+
+  ```sql
+  SELECT
+    pg_size_pretty(pg_table_size('sensors.observations')) AS table_size,
+    pg_size_pretty(pg_indexes_size('sensors.observations')) AS idx_size,
+    pg_size_pretty(pg_total_relation_size('sensors.observations')) AS total_size;
+  ```
+
+### Code & Potential Improvements
+
+- Solution URL: [Traffic Analytics](./databases/traffic_analytics.sql)
 
 ## Database Normalisation At Fred's Furniture
 
