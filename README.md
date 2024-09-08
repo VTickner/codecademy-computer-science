@@ -4,6 +4,7 @@ These projects were created as part of [Codecademy's](https://www.codecademy.com
 
 There were several portfolio projects created as part of this course. As they were larger and more extensive programs they can be found in their own repositories:
 
+- [Portfolio Project: Creating A Database](https://github.com/VTickner/codecademy-creating-a-database)
 - [Portfolio Project: Recommendation Software](https://github.com/VTickner/codecademy-recommendation-software)
 - [Portfolio Project: Python Terminal Game](https://github.com/VTickner/codecademy-python-terminal-game)
 
