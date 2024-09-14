@@ -217,8 +217,7 @@ While using ChatGPT helped speed up the generation of data, it didn't keep the d
 
 - Solution URL: [Designing A Database From Scratch](./databases/school.sql)
 
-- Originally I had most of the tables have id integers as primary keys, but I found that was extremely confusing when trying to add data, and double-checking what was in the table content (when viewing the database information). So I re-started the schema and database creation to simplify it and make the information more easily readable and understandable.
-- I also added a few test queries to check that I could pull out information appropriately and as expected.
+- I added a few test queries to check that I could pull out information appropriately and as expected.
 
 ## Database Triggers
 
