@@ -11,7 +11,8 @@ There were several portfolio projects created as part of this course. As they we
 ## Table of contents
 
 - Math For Computer Science
-- Computer Architecture
+- [Computer Architecture](#computer-architecture)
+  - [Creating An Adder Circuit](#creating-an-adder-circuit)
 - [Databases](#databases)
   - [Traffic Analytics](#traffic-analytics)
   - [Database Normalisation At Fred's Furniture](#database-normalisation-at-freds-furniture)
@@ -52,6 +53,27 @@ There were several portfolio projects created as part of this course. As they we
   - [Magic 8-Ball](#magic-8-ball)
 - [Other](#other)
   - [Author](#author)
+
+# Computer Architecture
+
+## Creating An Adder Circuit
+
+The aim of this project was to use a variety of gates `AND`, `OR`, `XOR` etc to create part of the ALU (Arithmetic Logic Unit) - the adder.
+
+- A full adder is normally comprised of two half adders.
+- A half adder takes in two inputs, `a` and `b`, and returns a sum bit, `s`, and a carry bit, `c`.
+- The full adder takes in `a`, `b`, and a carry-in bit `c`. It returns a sum bit `s` and a carry-out bit `c_out`.
+
+### Code & Potential Improvements
+
+- Solution URL: [Adder Circuit](./computer_architecture/adder_circuit.py)
+
+- Other files:
+  - [and_gate.py](./computer_architecture/and_gate.py)
+  - [nand.py](./computer_architecture/nand.py)
+  - [not_gate.py](./computer_architecture/not_gate.py)
+  - [or_gate.py](./computer_architecture/or_gate.py)
+  - [xor_gate.py](./computer_architecture/xor_gate.py)
 
 # Databases
 
