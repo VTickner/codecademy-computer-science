@@ -164,7 +164,7 @@ your_calculator = UltraSuperCalculator("Vicky")
 your_calculator.binary_reader("00000100000000000000011000000000")
 your_calculator.binary_reader("00000100000000000000001100000000")
 
-# Add/Subtract/Multiply/Divide 12 and 18 from registers (source 1 and 2)
+# Add/Subtract/Multiply/Divide 24 and 12 from registers (source 1 and 2)
 your_calculator.binary_reader("00000000001000100000000000100000")
 your_calculator.binary_reader("00000000001000100000000000100010")
 your_calculator.binary_reader("00000000001000100000000000011000")
