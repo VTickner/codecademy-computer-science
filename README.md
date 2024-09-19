@@ -12,6 +12,7 @@ There were several portfolio projects created as part of this course. As they we
 
 - Math For Computer Science
 - [Computer Architecture](#computer-architecture)
+  - [Ultra Super Calculation Computer](#ultra-super-calculation-computer)
   - [Creating An Adder Circuit](#creating-an-adder-circuit)
 - [Databases](#databases)
   - [Traffic Analytics](#traffic-analytics)
@@ -55,6 +56,28 @@ There were several portfolio projects created as part of this course. As they we
   - [Author](#author)
 
 # Computer Architecture
+
+## Ultra Super Calculation Computer
+
+The aim of this project was to write code for the CPU that will support the functions required by the ISA (Instruction Set Architecture) found in the solution file. Based on the design specification, the following five functions were to be performed:
+
+- Add
+- Subtract
+- Multiply
+- Divide
+- Display a history of calculations
+
+Several support functions also needed to be created:
+
+- Read and split up incoming data
+- Store a binary number to a register
+- Access what is stored in the register
+- Allocate some registers for a ‘history’ of the calculations
+- Store/Load from the history when needed
+
+### Code & Potential Improvements
+
+- Solution URL: [Ultra Super Calculation Computer](./computer_architecture/ultra_super_calculation_computer.py)
 
 ## Creating An Adder Circuit
 
