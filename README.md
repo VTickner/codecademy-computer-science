@@ -11,7 +11,6 @@ There were several portfolio projects created as part of this course. As they we
 
 ## Table of contents
 
-- Math For Computer Science
 - [Computer Architecture](#computer-architecture)
   - [Ultra Super Calculation Computer](#ultra-super-calculation-computer)
   - [Creating An Adder Circuit](#creating-an-adder-circuit)
